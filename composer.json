@@ -1,0 +1,22 @@
+{
+  "name": "publicTeamOsi/php-candidate-test",
+  "description": "Test task for PHP candidate.",
+  "type": "package",
+  "license": ["GPL-2.0+"],
+  "keywords": [],
+  "require": {
+    "php": "^7.2",
+    "symfony/yaml": "^5.2",
+    "symfony/dependency-injection": "^5.2",
+    "symfony/config": "^5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "PhpTest\\": "src/"
+    }
+  },
+  "replace": {},
+  "scripts": {},
+  "extra": {},
+  "require-dev": {}
+}
