@@ -20,3 +20,7 @@ Optionally you can also add caching logic, if first part will be too easy for yo
 
 ## How to check your functional:
 You can run `php test/index.php Mariupol` to check results of code execution.
+
+Or start development HTTP server `php -S localhost:8000 -t test` and open browser URL at:
+
+`http://localhost:8000/?city=Mariupol`
