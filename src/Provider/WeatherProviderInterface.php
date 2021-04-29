@@ -13,9 +13,9 @@ use PhpTest\Entity\WeatherInfo;
 interface WeatherProviderInterface
 {
     /**
-     * @param string $zipCode
+     * @param string $city
      *
      * @return WeatherInfo
      */
-    public function getInfo(string $zipCode): WeatherInfo;
+    public function getInfo(string $city): WeatherInfo;
 }

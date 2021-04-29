@@ -49,11 +49,11 @@ class RandomInfoProvider implements WeatherProviderInterface
     }
 
     /**
-     * @param string $zipCode
+     * @param string $city
      *
      * @return WeatherInfo
      */
-    public function getInfo(string $zipCode): WeatherInfo
+    public function getInfo(string $city): WeatherInfo
     {
         return new WeatherInfo(
             rand($this->minTemperature, $this->maxTemperature),

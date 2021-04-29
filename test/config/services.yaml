@@ -1,14 +1,10 @@
 parameters:
   providers:
-    - PhpTest\Provider\RandomInfoProvider
-
-    # TODO: implement next providers
-    #
-    # OpenWeatherMapProvider https://openweathermap.org/
-    # WeatherBitProvider https://www.weatherbit.io/account/create
-    #
-    # You will need to create accounts on this services to get an API keys.
-    # Both services are free.
+#    - PhpTest\Provider\RandomInfoProvider
+    - PhpTest\Provider\OpenWeatherMapProvider
+    - PhpTest\Provider\WeatherBitProvider
+  OpenWeatherMapProvider_api_key: 'c7486c096fcfdd41fdf476d25cf70637'
+  WeatherBitProvider_api_key: '5ffefffbe8f44972b100bd3298e0002b'
 
 services:
   _defaults:
@@ -26,9 +22,18 @@ services:
         $container: '@service_container'
         $providers: '%providers%'
 
-  PhpTest\Provider\RandomInfoProvider:
-    class: PhpTest\Provider\RandomInfoProvider
-    arguments: [10, 80, 4, 15]
+#  PhpTest\Provider\RandomInfoProvider:
+#    class: PhpTest\Provider\RandomInfoProvider
+#    arguments: [10, 80, 4, 15]
 
-  # You can add specific configuration for weather providers there.
-  # See RandomInfoProvider example
+# OpenWeatherMapProvider https://openweathermap.org/
+  PhpTest\Provider\OpenWeatherMapProvider:
+    class: PhpTest\Provider\OpenWeatherMapProvider
+    arguments:
+      api_key: '%OpenWeatherMapProvider_api_key%'
+
+# WeatherBitProvider https://www.weatherbit.io/account/create
+  PhpTest\Provider\WeatherBitProvider:
+    class: PhpTest\Provider\WeatherBitProvider
+    arguments:
+      api_key: '%WeatherBitProvider_api_key%'

@@ -1,14 +1,20 @@
 {
-  "name": "publicTeamOsi/php-candidate-test",
+  "name": "public-team-osi/php-candidate-test",
   "description": "Test task for PHP candidate.",
   "type": "package",
-  "license": ["GPL-2.0+"],
+  "license": [
+    "GPL-2.0+"
+  ],
   "keywords": [],
   "require": {
     "php": "^7.2",
     "symfony/yaml": "^5.2",
     "symfony/dependency-injection": "^5.2",
-    "symfony/config": "^5.2"
+    "symfony/config": "^5.2",
+    "cmfcmf/openweathermap-php-api": "^3.3",
+    "http-interop/http-factory-guzzle": "^1.0",
+    "php-http/guzzle6-adapter": "^2.0 || ^1.0",
+    "attogram/weatherbit-api-wrapper": "^2.1"
   },
   "autoload": {
     "psr-4": {
@@ -17,6 +23,5 @@
   },
   "replace": {},
   "scripts": {},
-  "extra": {},
-  "require-dev": {}
+  "extra": {}
 }

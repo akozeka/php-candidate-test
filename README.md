@@ -19,4 +19,4 @@ there is no need in full communication code development.
 Optionally you can also add caching logic, if first part will be too easy for you.
 
 ## How to check your functional:
-You can run `php test/index.php 71100` to check results of code execution.
+You can run `php test/index.php Mariupol` to check results of code execution.

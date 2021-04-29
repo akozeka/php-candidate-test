@@ -49,8 +49,19 @@ class WeatherService
      */
     public function getAverageInfo(string $city): WeatherInfo
     {
-        // TODO: check all registered providers and return WeatherInfo with average values.
+        $totalTemperature = 0;
+        $totalWindSpeed = 0;
 
-        return $this->providers[0]->getInfo($city);
+        foreach ($this->providers as $provider) {
+            $info = $provider->getInfo($city);
+
+            $totalTemperature += $info->getTemperature();
+            $totalWindSpeed += $info->getWindSpeed();
+        }
+
+        return new WeatherInfo(
+            $totalTemperature / count($this->providers),
+            $totalWindSpeed / count($this->providers)
+        );
     }
 }
